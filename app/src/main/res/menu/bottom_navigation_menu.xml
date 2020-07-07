@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_beranda"
+        android:enabled="true"
+        android:icon="@drawable/ic_beranda"
+        android:title="@string/beranda"/>
+    <item
+        android:id="@+id/menu_kartu"
+        android:enabled="true"
+        android:icon="@drawable/ic_kartu"
+        android:title="@string/kartu"/>
+    <item
+        android:id="@+id/menu_notifikasi"
+        android:enabled="true"
+        android:icon="@drawable/ic_notification"
+        android:title="@string/notifikasi"/>
+    <item
+        android:id="@+id/menu_profile"
+        android:enabled="true"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile"/>
+</menu>

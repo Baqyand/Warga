@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Warga</string>
+    <string name="masuk">Masuk</string>
+    <string name="lupa_password">Lupa password? Klik disini.</string>
+    <string name="password">Password</string>
+    <string name="nomor_handphone">Nomor Handphone</string>
+    <string name="pastikan">Pastikan anda sudah terdata oleh pengurus\nperumahan.</string>
+    <string name="beranda">Beranda</string>
+    <string name="kartu">Kartu</string>
+    <string name="notifikasi">Notifikasi</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="layanan">Layanan</string>
+    <string name="iuran">Iuran</string>
+    <string name="laporan">Laporan</string>
+    <string name="donasi">Donasi</string>
+    <string name="pusat_informasi">Pusat Informasi</string>
+    <string name="back">back</string>
+    <string name="bulan">Bulan</string>
+    <string name="tagihan">Tagihan</string>
+    <string name="bayar">Bayar</string>
+    <string name="fitur_unavailable">Fitur belum tersedia.\nTunggu update selanjutnya dari kami.</string>
+    <string name="satu_langkah_lagi">Satu langkah lagi</string>
+    <string name="close">close</string>
+    <string name="tutup">Tutup</string>
+    <string name="simpan">Simpan</string>
+    <string name="edit">Edit</string>
+    <string name="nama">Nama</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="ubah_data_pribadi">Ubah Data Pribadi</string>
+    <string name="alias">Alias</string>
+    <string name="no_telepon">No Telepon</string>
+</resources>

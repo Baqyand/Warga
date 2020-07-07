@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "49023231745",
+    "firebase_url": "https://warga-49c81.firebaseio.com",
+    "project_id": "warga-49c81",
+    "storage_bucket": "warga-49c81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49023231745:android:a626369223d65ca9c61d00",
+        "android_client_info": {
+          "package_name": "com.saku.warga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49023231745-i0r3n6mli3ous0ju7jumi237j0cu55t0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saku.warga",
+            "certificate_hash": "0345167de49440b33e56c2cd9a527c41b0fbbf50"
+          }
+        },
+        {
+          "client_id": "49023231745-27g0hrd8sfj45hnu732rfktieb0r3m6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARBIGBtlVHp2JlhS3HRaP4IPysLBYwXg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49023231745-27g0hrd8sfj45hnu732rfktieb0r3m6k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
