@@ -20,6 +20,9 @@
     <string name="bulan">Bulan</string>
     <string name="tagihan">Tagihan</string>
     <string name="bayar">Bayar</string>
+    <string name="langkah_pembayaran">
+        1. Pilih menu transfer.\n\n2. Masukkan nomor rekening Mandiri tujuan.\n\n3. Masukkan nominal pembayaran.\n\n4. Tuliskan alamat rumah didalam kotak deskripsi.\n\n5. Kirim bukti pendaftaran.
+    </string>
     <string name="fitur_unavailable">Fitur belum tersedia.\nTunggu update selanjutnya dari kami.</string>
     <string name="satu_langkah_lagi">Satu langkah lagi</string>
     <string name="close">close</string>
@@ -31,4 +34,8 @@
     <string name="ubah_data_pribadi">Ubah Data Pribadi</string>
     <string name="alias">Alias</string>
     <string name="no_telepon">No Telepon</string>
+    <string name="no_new_info">Tidak ada informasi baru untuk saat ini.</string>
+    <string name="no_new_notif">Tidak ada notifikasi baru.</string>
+    <string name="status_pembayaran">TERIMAKASIH\n\nPembayaran Anda telah kami proses, sistem kami akan melakukan verifikasi yang dilakukan setiap jam 12.00 dan jam 19.00. Kami akan mengirimkan notifikasi terkait status pembayaran Anda.</string>
+    <string name="status_pembayaran_demo">TERIMAKASIH\n\nMenu ini masih dalam proses pengembangan, data pembayaran anda tidak akan tercatat oleh sistem.</string>
 </resources>

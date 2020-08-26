@@ -2,8 +2,12 @@ package com.saku.warga
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.iid.FirebaseInstanceId
 import com.saku.warga.fragments.BerandaFragment
 import com.saku.warga.fragments.KartuFragment
 import com.saku.warga.fragments.NotifikasiFragment
@@ -26,7 +30,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.fade_in,R.anim.fade_out).replace(R.id.frame_layout, BerandaFragment()).commit()
         bottom_navigation.setOnNavigationItemSelectedListener { item: MenuItem ->
             when(item.itemId){
@@ -50,6 +53,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 
     fun encrypt(){
         /* User types in their password: */
@@ -87,12 +91,6 @@ class MainActivity : AppCompatActivity() {
         val keyBytes: ByteArray = keyFactory.generateSecret(keySpec).encoded
         val key: SecretKey = SecretKeySpec(keyBytes, "AES")
     }
-
-    fun encrypt2(){
-
-    }
-
-
 
     override fun onBackPressed() {
         val builder = AlertDialog.Builder(this)

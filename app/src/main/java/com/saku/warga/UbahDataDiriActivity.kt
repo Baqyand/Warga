@@ -34,6 +34,9 @@ class UbahDataDiriActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ubah_data_diri)
         preferences.setPreferences(this)
         `fun` = Functions(applicationContext)
+        back.setOnClickListener {
+            onBackPressed()
+        }
         getDataFromIntent()
         btn_edit.setOnClickListener {
             ImagePicker.with(this)

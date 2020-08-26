@@ -25,7 +25,6 @@
             android:background="@drawable/border_blue"/>
         <TextView
             android:id="@+id/bs_edit"
-            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/edit"
@@ -63,7 +62,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true" />
         </RelativeLayout>
         <RelativeLayout
@@ -77,9 +75,9 @@
             <TextView
                 android:id="@+id/no_telp"
                 android:layout_width="wrap_content"
+                android:textIsSelectable="true"
                 android:layout_height="wrap_content"
                 android:text="-"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true" />
         </RelativeLayout>
         <RelativeLayout
@@ -95,7 +93,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true" />
         </RelativeLayout>
     </LinearLayout>

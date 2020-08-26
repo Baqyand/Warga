@@ -3,46 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.KartuFragment">
-    <LinearLayout
+    <RelativeLayout
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
         android:id="@+id/header"
+        android:layout_marginTop="34dp"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/kartu_header_blue_background"
         android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_marginTop="17dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:id="@+id/back"
-                android:layout_marginLeft="22dp"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_arrow_back_white_14dp"
-                android:contentDescription="@string/back"
-                android:layout_marginStart="22dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:textColor="@android:color/white"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="18dp"
-                android:text="@string/laporan"
-                android:layout_marginStart="18dp" />
-        </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kartu Iuran 2020"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="26dp"
-            android:textSize="18sp"
-            android:layout_marginBottom="20dp"
-            android:textColor="@android:color/white"/>
-    </LinearLayout>
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:text="Kartu Iuran"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            app:cardCornerRadius="15dp"
+            android:layout_height="wrap_content">
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                app:ms_padding_top="5dp"
+                app:ms_dropdown_max_height="200dp"
+                app:ms_padding_bottom="5dp"
+                android:textColor="@android:color/white"
+                app:ms_arrow_tint="@android:color/white"
+                app:ms_background_color="@color/colorPrimary"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/recyclerview_title"
         android:layout_width="match_parent"
@@ -57,40 +52,84 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/bulan"
-            android:gravity="center"
             android:layout_weight="1"/>
         <TextView
+            android:id="@+id/sort_tagihan"
             android:layout_width="0dp"
             android:gravity="center"
             android:layout_height="wrap_content"
             android:text="@string/tagihan"
             android:layout_weight="1"/>
         <TextView
+            android:id="@+id/sort_bayar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="end"
             android:text="@string/bayar"
             android:layout_weight="1"/>
     </LinearLayout>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_below="@id/recyclerview_title"
+        android:orientation="vertical"
         android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:paddingTop="27dp"
+            android:paddingLeft="45dp"
+            android:overScrollMode="never"
+            android:paddingRight="45dp"
+            android:clipToPadding="false"
+            android:layout_above="@id/layout_tunggakan"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
         <TextView
+            android:visibility="gone"
+            android:id="@+id/empty_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/fitur_unavailable"/>
-    </LinearLayout>
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:layout_below="@+id/recyclerview_title"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:paddingRight="45dp"-->
-<!--        android:paddingLeft="45dp"-->
-<!--        android:clipToPadding="false"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        android:paddingEnd="45dp"-->
-<!--        android:paddingStart="25dp" />-->
+            android:overScrollMode="never"
+            android:text="Tidak ada data ditemukan"/>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/layout_tunggakan"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="16dp"
+            android:backgroundTint="@color/colorRed"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            tools:ignore="UnusedAttribute">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="22dp"
+                android:paddingBottom="22dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tunggakan"
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:text="Tunggakan"/>
+                <TextView
+                    android:id="@+id/lunasi"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorRed"
+                    android:background="@drawable/border_red_no_padding"
+                    android:layout_height="wrap_content"
+                    android:text="Lunasi"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
 
 </RelativeLayout>

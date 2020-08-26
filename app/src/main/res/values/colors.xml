@@ -7,4 +7,7 @@
     <color name="colorGrey">#F5F5F5</color>
     <color name="colorProfile">#F2F2F2</color>
     <color name="colorRed">#FF0404</color>
+    <color name="colorBluePale">#4b4eb5</color>
+    <color name="colorSemiBlue">#F0F0F0</color>
+
 </resources>

@@ -115,25 +115,38 @@
 <!--                android:gravity="center"-->
 <!--                android:text="@string/fitur_unavailable"/>-->
 <!--        </LinearLayout>-->
-
-        <TextView
-            android:layout_marginTop="20dp"
-            android:background="@drawable/informasi_background_red"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_marginRight="10dp"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:text="Tagihan iuran sudah jatuh tempo"
-            tools:ignore="RtlHardcoded" />
-        <TextView
-            android:layout_marginTop="8dp"
-            android:background="@drawable/informasi_background_red"
-            android:layout_width="match_parent"
-            android:layout_marginRight="10dp"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:text="Mohon upload bukti pembayaran"
-            tools:ignore="RtlHardcoded" />
+            android:layout_height="match_parent">
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:layout_marginBottom="20dp"
+                    />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:text="@string/no_new_info"/>
+        </RelativeLayout>
+<!--        <TextView-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:background="@drawable/informasi_background_red"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:text="Mohon upload bukti pembayaran"-->
+<!--            tools:ignore="RtlHardcoded" />-->
 
 
 <!--        <androidx.recyclerview.widget.RecyclerView-->

@@ -13,8 +13,8 @@ android {
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
-
+        versionName "1.1.0beta"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -37,9 +37,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0-beta01'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-analytics:17.4.4'
+    implementation 'com.google.firebase:firebase-messaging:20.2.3'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
+
 //    implementation 'com.alexzh:circleimageview:1.2.0'
 //    implementation 'com.mikhaellopez:circularimageview:4.2.0'
 //    implementation 'com.makeramen:roundedimageview:2.3.
@@ -51,5 +57,10 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
 
     implementation 'com.github.dhaval2404:imagepicker:1.7.1'
+
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
+
+//    implementation 'com.github.tiper:MaterialSpinner:1.4.2'
+    compile 'com.jaredrummler:material-spinner:1.3.1'
 
 }

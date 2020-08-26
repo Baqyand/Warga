@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main"
     tools:context=".LoginActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,17 +17,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/masuk"
-            android:textSize="30sp"/>
+            android:autoSizeMinTextSize="30sp"
+            android:autoSizeMaxTextSize="48sp"
+            android:autoSizeTextType="uniform"
+            android:textSize="30sp"
+            tools:ignore="UnusedAttribute" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="10sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="16sp"
+            android:autoSizeTextType="uniform"
             android:text="@string/pastikan"
-            tools:ignore="SmallSp" />
+            tools:ignore="SmallSp,UnusedAttribute" />
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_marginTop="30dp"
             app:endIconMode="none"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeWidth="0dp"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_no_hp"
@@ -37,10 +47,14 @@
                 android:inputType="number"
                 android:hint="@string/nomor_handphone"/>
         </com.google.android.material.textfield.TextInputLayout>
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        app:boxStrokeColor="@null"-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             app:endIconMode="password_toggle"
             android:layout_marginTop="23dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
             app:endIconTint="@color/colorPrimary"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
@@ -56,8 +70,12 @@
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="18sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
             android:layout_gravity="end"
-            android:text="@string/lupa_password"/>
+            android:text="@string/lupa_password"
+            tools:ignore="UnusedAttribute" />
     </LinearLayout>
     <Button
         android:id="@+id/btn_login"
@@ -73,4 +91,12 @@
         android:layout_marginBottom="146dp"
         android:layout_alignParentBottom="true"
         />
+    <TextView
+        android:id="@+id/app_version"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="10sp"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>
